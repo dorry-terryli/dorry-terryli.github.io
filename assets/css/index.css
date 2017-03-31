@@ -9,7 +9,7 @@
 }
 
 .countdown-title {
-    padding-top: 87px;
+    padding-top: 227px;
     font-size: 60px;
     font-weight: 500;
 }
@@ -57,6 +57,10 @@
     margin-top: -30px;
 }
 
+.download-a:hover{
+    text-decoration: none;
+}
+
 .download-button {
     margin-left: auto;
     margin-right: auto;
@@ -64,22 +68,32 @@
     width: 280px;
     height: 64px;
     border-radius: 2px;
-    background-color: #467612;
+    background-color: #239B56;
+    padding-top: 22px;
 }
 
 .download-button:hover {
-    cursor: not-allowed;
+    cursor: pointer;
+    background-color: #28B463;
 }
 
-.download-button p {
-    line-height: 64px;
-    font-size: 36px;
+.download-button .download {
+    /*line-height: 64px;*/
+    font-size: 24px;
     font-weight: 500;
-    color: #7f8975;
+    color: #eee;
+}
+
+.download-button .version {
+    line-height: 24px;
+    padding-top: 6px;
+    color: #eee;
 }
 /*demovedio container*/
 .demovedio-container {
-    padding-top: 147px;
+    background-color: #455963;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .demovedio-container img {
@@ -91,7 +105,7 @@
 }
 /* product info container part*/
 .product-info-container {
-    margin-top: -28px;
+    /*margin-top: -28px;*/
     padding-top: 148px;
     padding-bottom: 94px;
     background-color: #fafafa;
@@ -117,4 +131,25 @@
 .mdl-cell--3-col img {
     width: 128px;
     height: 128px;
+}
+
+.video-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.7);
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
 }
