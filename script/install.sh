@@ -1,7 +1,7 @@
 #!/bin/bash
 
-sudo apt install python3
-sudo apt install python3-pip
+sudo apt install -y python3
+sudo apt install -y python3-pip
 sudo pip3 install pymongo
 wget https://bitbucket.org/MatchboxDorry/dorry-installation/get/feature/release-script.tar.gz
 mkdir ~/dorry-alpha/
