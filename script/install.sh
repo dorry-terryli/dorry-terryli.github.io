@@ -2,11 +2,8 @@
 
 set -e
 sudo apt install -y python3
-echo $?
 sudo apt install -y python3-pip
-echo $?
 sudo pip3 install pymongo
-echo $?
 wget https://bitbucket.org/MatchboxDorry/dorry-installation/get/feature/release-script.tar.gz
 mkdir ~/dorry-alpha/
 mkdir ~/dorry-alpha/dorry-installation
@@ -28,14 +25,15 @@ sudo kubeadm init
 sudo cp /etc/kubernetes/admin.conf $HOME/
 echo $USER
 sudo chown $USER:$USER $HOME/admin.conf
-echo 'export KUBECONFIG=$HOME/admin.conf' >> $HOME/.bashrc
-source $HOME/.bashrc
-echo $KUBECONFIG
+# echo 'export KUBECONFIG=$HOME/admin.conf' >> $HOME/.bashrc
+# source $HOME/.bashrc
+# echo $KUBECONFIG
 
 kubectl taint nodes --all node-role.kubernetes.io/master-
 kubectl apply -f http://docs.projectcalico.org/v2.1/getting-started/kubernetes/installation/hosted/kubeadm/1.6/calico.yaml
 kubectl create namespace dorry-system
 
+sudo XXX
 #sed -i 's/--insecure-bind-address=127.0.0.1/--insecure-bind-address=0.0.0.0/g' /etc/kubernetes/manifests/kube-apiserver.json
 sudo sed -i 's/--insecure-port=0/--insecure-port=8080/g' /etc/kubernetes/manifests/kube-apiserver.yaml
 sudo sed -i '/- kube-apiserver/a\    - --insecure-bind-address=0.0.0.0' /etc/kubernetes/manifests/kube-apiserver.yaml
