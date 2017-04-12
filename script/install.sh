@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+sudo apt-get install -y docker.io
 sudo apt install -y python3
 sudo apt install -y python3-pip
 sudo pip3 install pymongo
