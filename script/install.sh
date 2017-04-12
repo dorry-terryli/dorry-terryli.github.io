@@ -40,3 +40,7 @@ echo -e '\033[0;32m>>> SUCCESS: Install Kubernetes complete! <<<\033[0m'
 
 sudo python3 ~/dorry-alpha/dorry-installation/MatchboxDorry-dorry-installation-*/install_platform.py
 sudo rm -r ~/dorry-alpha
+echo -e '\033[0;32m>>> Please visit https://<your ip>:4200 <<<\033[0m'
+echo -e '\033[0;32m =================================== \033[0m'
+echo -e '\033[0;32m   Username: dorry \033[0m'
+echo -e '\033[0;32m   Password: abc123_ \033[0m'
