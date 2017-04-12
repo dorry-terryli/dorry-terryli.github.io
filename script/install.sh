@@ -2,8 +2,11 @@
 
 set -e
 sudo apt install -y python3
+echo $?
 sudo apt install -y python3-pip
+echo $?
 sudo pip3 install pymongo
+echo $?
 wget https://bitbucket.org/MatchboxDorry/dorry-installation/get/feature/release-script.tar.gz
 mkdir ~/dorry-alpha/
 mkdir ~/dorry-alpha/dorry-installation
