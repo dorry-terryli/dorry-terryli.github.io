@@ -33,7 +33,6 @@ kubectl taint nodes --all node-role.kubernetes.io/master-
 kubectl apply -f http://docs.projectcalico.org/v2.1/getting-started/kubernetes/installation/hosted/kubeadm/1.6/calico.yaml
 kubectl create namespace dorry-system
 
-sudo XXX
 #sed -i 's/--insecure-bind-address=127.0.0.1/--insecure-bind-address=0.0.0.0/g' /etc/kubernetes/manifests/kube-apiserver.json
 sudo sed -i 's/--insecure-port=0/--insecure-port=8080/g' /etc/kubernetes/manifests/kube-apiserver.yaml
 sudo sed -i '/- kube-apiserver/a\    - --insecure-bind-address=0.0.0.0' /etc/kubernetes/manifests/kube-apiserver.yaml
